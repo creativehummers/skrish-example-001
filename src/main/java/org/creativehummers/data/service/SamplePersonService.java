@@ -17,7 +17,7 @@ public class SamplePersonService {
     }
 
     public Optional<SamplePerson> get(Long id) {
-        return repository.findById(id);
+        return Optional.ofNullable(repository.getOne(id));
     }
 
     public SamplePerson update(SamplePerson entity) {
@@ -25,7 +25,7 @@ public class SamplePersonService {
     }
 
     public void delete(Long id) {
-        repository.deleteById(id);
+        //repository.deleteById(id);
     }
 
     public Page<SamplePerson> list(Pageable pageable) {

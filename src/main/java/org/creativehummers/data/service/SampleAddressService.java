@@ -17,7 +17,7 @@ public class SampleAddressService {
     }
 
     public Optional<SampleAddress> get(Long id) {
-        return repository.findById(id);
+        return Optional.ofNullable(repository.getOne(id));
     }
 
     public SampleAddress update(SampleAddress entity) {
@@ -25,7 +25,7 @@ public class SampleAddressService {
     }
 
     public void delete(Long id) {
-        repository.deleteById(id);
+       // repository.deleteById(id);
     }
 
     public Page<SampleAddress> list(Pageable pageable) {
