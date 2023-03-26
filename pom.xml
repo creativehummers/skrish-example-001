@@ -43,7 +43,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
-                <version>1.3.2.RELEASE</version>
+                <version>3.0.5</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -155,6 +155,12 @@
             <id>production</id>
             <dependencies>
                 <!-- Exclude development dependencies from production -->
+                <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context-support</artifactId>
+                    <version>4.2.4.RELEASE</version>
+                    <scope>test</scope>
+                </dependency>
                 <dependency>
                     <groupId>com.vaadin</groupId>
                     <artifactId>vaadin-core</artifactId>

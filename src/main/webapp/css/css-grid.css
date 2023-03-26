@@ -1,6 +1,6 @@
 .head {
-  grid-area: header;
-  background-color: blue;
+  grid-area: grid1;
+  background-color: red;
 }
 .main {
   grid-area: main;
@@ -19,7 +19,7 @@
   grid-template-columns: 100px 200px 200px 200px;
   grid-template-rows: 50px 400px 25px;
   grid-template-areas:
-    "header header header header"
+    "grid1 grid2 grid3 grid4"
     "sidebar main main main "
     "footer footer footer footer";
 }
